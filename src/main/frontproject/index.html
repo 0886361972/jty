@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>58158计划网_58158计划网</title>
+    <meta name="keywords" content="58158计划网 重庆时时彩 北京赛车 11选5 十一选五 快乐10分 快乐十分"/>
+    <meta name="description" content="58158计划网 重庆时时彩 北京赛车 11选5 十一选五 快乐10分 快乐十分"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="themes/default/src/reset.css">
+    <link rel="stylesheet" href="themes/default/src/index.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css">
+    <script src="themes/default/src/jquery-2.2.3.min.js"></script>
+    <script src="themes/default/src/jquery.cookie.js"></script>
+
+    <script src="themes/default/src/layer/layer.js"></script>
+    <script src="//cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <style>
+        .swiper-pagination-bullet-active {
+            background: #f9ff00;
+        }
+
+        .footer {
+            height: 60px;
+            text-align: center;
+            background: #ef393b;
+            padding: 10px 0;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: white;
+            line-height: 1.6em;
+        }
+
+        .swiper-wrapper {
+            font-size: 0;
+        }
+
+        .swiper-wrapper img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <img src="http://www-58158.com/themes/lh/images/plus_logo.png">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="http://www.yb1115.com" target="_blank"><img
+                    src="themes/default/images/header.jpg"></a></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 5000
+    });
+</script>
+<header>
+    <a href="javascript:history.go(-1)" class="back"></a>
+    <a href="index.html" class="home"></a>
+    <h2><span>彩票分类</span><input type="hidden" name="lotteryType" value="ssc"/></h2>
+    <div class="select">
+        <p><a href="index.html">重庆时时彩</a></p>
+        <p><a href="pk10.html">北京赛车</a></p>
+        <p><a href="ssc.html">广东11选5</a></p>
+        <p><a href="jsk3.html">江苏快三</a></p>
+        <p><a href="gdkl10.html">广东快乐10分</a></p></div>
+</header>
+
+<div class="nav row">
+    <div class="col-33 ">
+        <span><span id="type">计划球位</span><input type="hidden" name="filter_EQS_categoryType" value=""/></span>
+        <ul class="select">
+            <li><a href="#" onclick="javascript:link('filter_EQS_categoryType',null);">全部</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_categoryType','N1');">个位</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_categoryType','N2');">十位</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_categoryType','N3');">百位</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_categoryType','N4');">千位</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_categoryType','N5');">万位</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_categoryType','A');">五星</a></li>
+        </ul>
+    </div>
+    <div class="col-33 ">
+        <span><span id="qi">计划期数</span><input type="hidden" name="filter_EQS_qi" value=""/></span>
+        <ul class="select">
+            <li><a href="#" onclick="javascript:link('filter_EQS_qi',null);">全部</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_qi','1期');">一期</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_qi','2期');">二期</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_qi','3期');">三期</a></li>
+        </ul>
+    </div>
+    <div class="col-33 ">
+        <span><span id="ma">计划码数</span><input type="hidden" name="filter_EQS_ma" value=""/></span>
+        <ul class="select">
+            <li><a href="#" onclick="javascript:link('filter_EQS_ma',null);">全部</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_ma','1码');">1码</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_ma','2码');">2码</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_ma','3码');">3码</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_ma','4码');">4码</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_ma','5码');">5码</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_ma','6码');">6码</a></li>
+            <li><a href="#" onclick="javascript:link('filter_EQS_ma','7码');">7码</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="shade"></div>
+<div class="content">
+    <ul class="link">
+    </ul>
+</div>
+<input type="hidden" name="page" value="1"/>
+
+<script>
+
+    $(function () {
+
+        var filter_EQS_categoryType = ($.cookie('ssc_filter_EQS_categoryType'));
+        if (filter_EQS_categoryType != null && filter_EQS_categoryType != '') {
+            var type = '计划球位';
+            if (filter_EQS_categoryType == 'N1')type = '个位';
+            if (filter_EQS_categoryType == 'N2')type = '十位';
+            if (filter_EQS_categoryType == 'N3')type = '百位';
+            if (filter_EQS_categoryType == 'N4')type = '千位';
+            if (filter_EQS_categoryType == 'N5')type = '万位';
+            if (filter_EQS_categoryType == 'A')type = '五星';
+            $("#type").text(type);
+        }
+        var filter_EQS_ma = ($.cookie('ssc_filter_EQS_ma'));
+        if (filter_EQS_ma != null && filter_EQS_ma != '') {
+            $("#ma").text(filter_EQS_ma);
+        } else {
+            $("#ma").text('计划码数');
+        }
+        var filter_EQS_qi = ($.cookie('ssc_filter_EQS_qi'));
+        if (filter_EQS_qi != null && filter_EQS_qi != '') {
+            $("#qi").text(filter_EQS_qi);
+        } else {
+
+            $("#qi").text('计划期数');
+        }
+
+
+        $('.nav .col-33').on('click', function () {
+            $('.shade').show();
+            $('.select').hide();
+            $(this).find('.select').show();
+        });
+
+        $('header h2').on('click', function () {
+            $(this).parent().find('.select').toggle();
+        });
+
+        $('.shade').on('click', function () {
+            $('.select').hide();
+            $('.shade').hide()
+        });
+
+        if ($.cookie('layer') == undefined) {
+            layer.confirm('<div style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; border: 0px; font-size: 14px; vertical-align: baseline; color: rgb(0, 0, 0); font-family: Simsun; font-variant-ligatures: normal; orphans: 2; text-align: center; widows: 2; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;">	' +
+                    '<div style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; outline: 0px; zoom: 1; border: 0px; vertical-align: baseline; color: rgb(51, 51, 51); font-family: \'Microsoft YaHei\', sans-serif; line-height: 24px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">		' +
+                    '<div style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; outline: 0px; zoom: 1; border: 0px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">		' +
+                    '	<span style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; border: 0px; font-size: 18px; vertical-align: baseline; outline: 0px; zoom: 1; background: transparent;"><span style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; outline: 0px; zoom: 1; color: rgb(255, 255, 255); background: transparent;">' +
+                    '<span style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; outline: 0px; zoom: 1; background: rgb(255, 0, 0);">&nbsp;易记域名：</span>' +
+                    '<span style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; outline: 0px; zoom: 1; background: rgb(255, 0, 0);">58158c.com</span></span></span></div>	' +
+                    '	<div style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; outline: 0px; zoom: 1; border: 0px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">			' +
+                    '<span style="color: rgb(255, 0, 0);">QQ交流群：15559222</span><a href="http://shang.qq.com/wpa/qunwpa?idkey=5601977b2621c18baf66ac7ffcfa24971093cd5e04d7568ea2dc4dcb9e88f1e8">' +
+                    '<img alt="奇人神算C" border="0" src="//pub.idqqimg.com/wpa/images/group.png" title="奇人神算C" /></a></div>	' +
+                    '	<div style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; outline: 0px; zoom: 1; border: 0px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">			' +
+                    '<div style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; outline: 0px; zoom: 1; border: 0px; font-size: 13.3333px; vertical-align: baseline; background: transparent;">				<span style="font-size:16px;"><span style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; outline: 0px; zoom: 1; color: rgb(255, 0, 0); background: transparent;">【站长担保网投】</span></span><a href="http://4289666.com/" style="font-size: 16px; box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; outline: 0px; zoom: 1; background: transparent;">www.yb1115.com</a></div>			<div style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; outline: 0px; zoom: 1; border: 0px; font-size: 13.3333px; vertical-align: baseline; background: transparent;">				<span style="font-size:16px;"><strong style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; margin: 0px; padding: 0px; border: 0px; font-size: 13.3333px; vertical-align: baseline; outline: 0px; zoom: 1; background: transparent;">站长推荐，绝对错不了</strong></span></div>		</div>	</div></div><p>	&nbsp;</p>', {
+                btn: ['申请加群', '关闭'], //按钮
+
+                title: "温馨提示"
+            }, function () {
+                location.href = "http://shang.qq.com/wpa/qunwpa?idkey=5601977b2621c18baf66ac7ffcfa24971093cd5e04d7568ea2dc4dcb9e88f1e8";
+            }, function () {
+                layer.closeAll();
+
+            });
+            $.cookie('layer', '11', {expires: 0.02});
+        }
+
+
+    });
+
+    function link(key, value) {
+        if (null == value) {
+            $.cookie("ssc_" + key, '', {expires: 0.02});
+        } else {
+            $.cookie("ssc_" + key, value, {expires: 0.02});
+        }
+        window.location.href = location.href;
+    }
+
+
+</script>
+
+<script type="text/javascript">
+    var scrollData = false;
+    $(function () {
+        load();
+        $(window).on('scroll', function () {
+            var top = $(window).scrollTop();
+            var height = $(window).height();
+            var sheight = $('body').height();
+            if ((sheight - height - top) < 5) {
+                if (scrollData) return;
+                load();
+            }
+        })
+    })
+
+    function load() {
+        var page = $("input[name=page]").val();
+        scrollData = true;
+        var filter_EQS_categoryType = ($.cookie('ssc_filter_EQS_categoryType'));
+        if (filter_EQS_categoryType == null)filter_EQS_categoryType = '';
+        var filter_EQS_ma = ($.cookie('ssc_filter_EQS_ma'));
+        if (filter_EQS_ma == null)filter_EQS_ma = '';
+        var filter_EQS_qi = ($.cookie('ssc_filter_EQS_qi'));
+        if (filter_EQS_qi == null)filter_EQS_qi = '';
+
+        var url = "http://14.47.125.43:9999/plan/article/ssc/json.front?page=" + page + "&filter_EQS_categoryType=" + filter_EQS_categoryType + "&filter_EQS_ma=" + filter_EQS_ma + "&filter_EQS_qi=" + filter_EQS_qi;
+        $.post(url, function (obj) {
+            scrollData = false;
+            if (obj.total > 0) {
+                var rows = obj.rows;
+                for (var i = 0; i < rows.length; i++) {
+                    var row = rows[i];
+                    var html = '<li><a href="show.html?id=' + row.id + '"><p><span>' + row.categoryDesc + '</span>' + row.title + '</p></a></li>';
+                    $('.link').append(html);
+                }
+
+                $("input[name=page]").val(Number(page) + 1);
+            } else {
+            }
+        }, "json");
+    }
+
+</script>
+</body>
+</html>
