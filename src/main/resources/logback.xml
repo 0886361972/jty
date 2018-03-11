@@ -22,9 +22,9 @@
 	    </filter> 过滤器只打印错误日志 -->
 	</appender>
 
-	<logger name="com.tianyu.jty" level="DEBUG">
-		<appender-ref ref="console" />
-	</logger>
+	<!--<logger name="com.tianyu.jty" level="DEBUG">-->
+		<!--<appender-ref ref="console" />-->
+	<!--</logger>-->
 	
 	<!--log4jdbc -->
 	<logger name="jdbc.sqltiming" level="DEBUG"/>
