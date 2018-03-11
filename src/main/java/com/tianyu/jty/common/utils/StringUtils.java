@@ -126,7 +126,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	}
 
 	/**
-	 * 重写
+	 * 小于10的数字补位0
 	 * @param iterator
 	 * @param separator
 	 * @return
