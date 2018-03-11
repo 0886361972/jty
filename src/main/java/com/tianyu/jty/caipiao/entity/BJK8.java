@@ -1,6 +1,7 @@
 package com.tianyu.jty.caipiao.entity;
 
 import com.tianyu.jty.common.utils.Global;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -33,6 +34,13 @@ public class BJK8  implements java.io.Serializable {
     private Long qs;
     private String kj;
     private Date addTime;
+    //操作员
+    private String operator;
+    //操作员ip
+    private String operatorIp;
+    //
+    private Boolean flag;
+
 
 
     public BJK8() {
@@ -68,6 +76,7 @@ public class BJK8  implements java.io.Serializable {
     }
 
     @Column(name = "ADDTIME")
+
     public Date getAddTime() {
         return addTime;
     }
@@ -86,4 +95,30 @@ public class BJK8  implements java.io.Serializable {
         this.dateLine = dateLine;
     }
 
+    @Column(name = "OPERATOR")
+    public String getOperator() {
+        return operator;
+    }
+
+    public void setOperator(String operator) {
+        this.operator = operator;
+    }
+
+    @Column(name = "OPERATOR_IP")
+    public String getOperatorIp() {
+        return operatorIp;
+    }
+
+    public void setOperatorIp(String operatorIp) {
+        this.operatorIp = operatorIp;
+    }
+
+    @Column(name = "FLAG")
+    public Boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
+    }
 }

@@ -32,6 +32,10 @@
 	<root level="WARN">
 		<appender-ref ref="rollingFile" />
 	</root>
+
+	<root level="info">
+		<appender-ref ref="console" />
+	</root>
 	
 	<!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
 	<!-- <logger name="org.hibernate" level="WARN" />

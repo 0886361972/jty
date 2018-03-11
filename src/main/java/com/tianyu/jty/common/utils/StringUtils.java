@@ -1,9 +1,11 @@
 package com.tianyu.jty.common.utils;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 
@@ -117,6 +119,51 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	 */
 	public static Integer toInteger(Object val){
 		return toLong(val).intValue();
+	}
+
+	public static String join(final Iterable<?> iterable, final char separator) {
+		return iterable == null ? null : join(iterable.iterator(), separator);
+	}
+
+	/**
+	 * 重写
+	 * @param iterator
+	 * @param separator
+	 * @return
+	 */
+	public static String join(final Iterator<?> iterator, final char separator) {
+		if (iterator == null) {
+			return null;
+		} else if (!iterator.hasNext()) {
+			return "";
+		} else {
+			Object first = iterator.next();
+			if (!iterator.hasNext()) {
+				String result = ObjectUtils.toString(first);
+				return result;
+			} else {
+				StringBuilder buf = new StringBuilder(256);
+				if (first != null) {
+					if(first instanceof Integer&&(Integer)first<10){
+						buf.append('0');
+					}
+					buf.append(first);
+				}
+
+				while(iterator.hasNext()) {
+					buf.append(separator);
+					Object obj = iterator.next();
+					if (obj != null) {
+						if(obj instanceof Integer&&(Integer)obj<10){
+							buf.append('0');
+						}
+						buf.append(obj);
+					}
+				}
+
+				return buf.toString();
+			}
+		}
 	}
 	
 }

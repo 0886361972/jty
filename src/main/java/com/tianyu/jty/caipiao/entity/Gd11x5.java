@@ -35,6 +35,12 @@ public class Gd11x5 implements java.io.Serializable {
     private Long qs;
     private String kj;
     private Date addTime;
+    //操作员
+    private String operator;
+    //操作员ip
+    private String operatorIp;
+    //
+    private Boolean flag;
 
     public Gd11x5(){
 
@@ -87,5 +93,32 @@ public class Gd11x5 implements java.io.Serializable {
 
     public void setDateLine(Date dateLine) {
         this.dateLine = dateLine;
+    }
+
+    @Column(name = "OPERATOR")
+    public String getOperator() {
+        return operator;
+    }
+
+    public void setOperator(String operator) {
+        this.operator = operator;
+    }
+
+    @Column(name = "OPERATOR_IP")
+    public String getOperatorIp() {
+        return operatorIp;
+    }
+
+    public void setOperatorIp(String operatorIp) {
+        this.operatorIp = operatorIp;
+    }
+
+    @Column(name = "FLAG")
+    public Boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
     }
 }

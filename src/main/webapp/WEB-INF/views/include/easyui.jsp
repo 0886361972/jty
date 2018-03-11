@@ -56,6 +56,8 @@
 <script src="${ctx}/static/plugins/easyui/jeasyui-extensions/jquery.my97.js" type="text/javascript"></script>    
 <script src="${ctx}/static/plugins/easyui/jeasyui-extensions/jeasyui.extensions.ty.js"></script>
 
+<script src="${ctx}/static/plugins/jquery/jquery-dateFormat.min.js"></script>
+
 <link rel="stylesheet" href="${ctx }/static/plugins/easyui/common/other.css"></link>
 
 <script>

@@ -22,4 +22,15 @@ public class BJK8Dao extends HibernateDao<BJK8, Integer> {
         Query query= createQuery(hql, qs);
         return query.list();
     }
+
+    /**
+     * 查找最大的期数号
+     * @return
+     */
+    public Long findMaxQS(){
+        String hql="select qs from BJK8 order by qs desc ";
+        Query query= createQuery(hql);
+        query.setMaxResults(1);
+        return (Long) query.uniqueResult();
+    }
 }
